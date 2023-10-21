@@ -1,0 +1,497 @@
+/* ==UserStyle==
+@name         Test SocialFurr
+@version      20231021.00.28
+@namespace    userstyles.world/user/ThatOneUnoriginal
+@description  Testing a creation of a theme for socialfurr
+@author       ThatOneUnoriginal
+@license      MIT
+==/UserStyle== */
+
+@-moz-document domain("socialfurr.com") {
+/*--Hiding Features--*/
+
+/*Removing "Upgrade To Pro" Notices*/
+.tag_prem{
+    display: none;
+}
+.tag_go_pro_user{
+    display: none;
+}
+.show.tag_scroll.tag_hdr_user_dropdown.dropdown-static-menu.dropdown-menu-right.dropdown-menu [href="https://socialfurr.com/go-pro"]{
+    display: none;
+}
+.show.tag_scroll.tag_hdr_user_dropdown.dropdown-static-menu.dropdown-menu-right.dropdown-menu > hr.style-two:nth-of-type(1){
+    display:none;
+}
+
+/*Hides "Profile Completion" Popup on User Profile*/
+.bar-60.profile-completion-bar.wow_content.mb-0.page-margin{
+    display: none;
+}
+
+/*Removes Wallet Pill from Menu*/
+.tag_hdr_user_submenu.valign{
+    display: none;
+}
+/*Removes "Latest Products" Side Content on Timeline*/
+.div.tag_sidebar_widget.mb-15.wow_content:nth-of-type(6){
+    display:none;
+}
+/*Removes "Market" Option From Sidebar*/
+.market.valign.btn-mat.btn{
+    display: none;
+}
+/*Removes "Products" Tab From User Profiles*/
+.user-bottom-nav > ul > li:nth-of-type(8){
+    display: none;
+}
+/*Removes "Market" Section of the "See All" Popup on the Sidebar*/
+#contnet > div > div > div.row > div.col-lg-3.sidebar.rightcol.sidebar_fixed.tag_main_right_side > div > div:nth-child(6){
+    display: none;
+}
+div.tag_navbar_top_side_all_sec:nth-of-type(4) > a.btn-mat.btn:nth-of-type(1){
+    display: none;
+}
+div.tag_navbar_top_side_all_sec:nth-of-type(4) > a.btn-mat.btn:nth-of-type(2){
+    display: none;
+}
+
+/*Removes "Get Mobile Apps" Side Content on Timeline*/
+div.tag_sidebar_widget.mb-15.wow_content:nth-of-type(7){
+    display:none;
+}
+
+/*Removes Like Animation When Hovering Over Like Button*/
+div.valign.stats.tag_post_actions > div.valign > div.wo-reaction-post.valign.stat-item.unselectable > ul > li {
+    display: none;
+}
+div.valign.stats.tag_post_actions > div.valign > div.wo-reaction-post.valign.stat-item.unselectable > ul > li > img{
+    display:none;
+}
+
+/*Removes (Broken) Like Indicator from Blog Post Comments*/
+#comment_reacted{display:none;}
+
+/*Removes Like Animation When Hovering Over Like Button On Blog Post Comments*/
+#comment_reactions > ul{
+    display: none !important;
+}
+
+/*Removes "Sell Product" Button on Post Popup*/
+#publisher-box-focus > div.publisher-box-footer > div.valign.pub-footer-upper > a{
+    display:none;
+}
+
+/*Removes "Location" Button on Post Popup*/
+#publisher-box-focus > div.publisher-box-footer > div.valign.pub-footer-upper > span:nth-child(9){
+    display: none;
+}
+
+/*Removes Upload Images, Upload Video, and Audio Upload on Post Popup*/
+#publisher-box-focus > div.publisher-box-footer > div.valign.pub-footer-upper > span:nth-child(1){
+    display: none;
+}
+#publisher-box-focus > div.publisher-box-footer > div.valign.pub-footer-upper > span:nth-child(2){
+    display: none;
+}
+#publisher-box-focus > div.publisher-box-footer > div.valign.pub-footer-upper > span:nth-child(6){
+    display: none;
+}
+#publisher-box-focus > div.publisher-box-footer > div.valign.pub-footer-upper > span:nth-child(10){
+    display: none;
+}
+
+/*Removes Ko-Fi Sidebar Content*/
+#kofiframe{
+    display: none;
+}
+
+/*Removes @ button from the Post Popup*/
+#publisher-box-focus > div.publisher-box-footer > div.valign.pub-footer-bottom > div:nth-child(2) > span:nth-child(2){
+    display: none;
+}
+/*Removes # button from the Post Popup*/
+#publisher-box-focus > div.publisher-box-footer > div.valign.pub-footer-bottom > div:nth-child(2) > span:nth-child(1){
+    display: none;
+}
+}
+
+@-moz-document domain("socialfurr.com") {
+/*Style Modifications*/
+/*Colour Variables*/
+
+/*Forces all backgrounds to be #000 or black; Overwrites users Custom Background Image*/
+body{
+    background: #000 !important;
+}
+/*Removes Special Background Header Gradient Thing*/
+#contnet > div.page-margin.profile.wo_user_profile > div > div.profile-container.tag_cover_bg > div.tag_cover_sec_bg{
+    display:none;
+}
+:root {
+    --sfrprimary: #ff9800;
+    --sfrpastel: #e49c32a1;
+    --sfrpastel-red:#e43232a1;
+    --sfrred2: #d54b4b;
+    --sfrred: #ff8585 ;
+    --sfrpastel-green:#3ee4327d;
+    --sfrgreen: #07c036;
+    --sfrpastel-purple:#9432e47d;
+    --sfrpurple: #8f3deb ;
+    --sfrpurple2: #a572df ;
+    --sfrprimary-hovered: #db8c16;
+    --sfrdark-hovered: #2a2828;
+    --sfr-hovered: #3D3D3D;
+    --sfr-hovered2: #4c4c4c;
+    --main: var(--sfrprimary);
+    --main-hover: var(--sfrprimary-hovered);
+}
+
+/*Replaces Gradients of Sidebar Icons with Flat Colours*/
+.tag_navbar_top_side .sidebar_innr > .btn.groups svg {
+    background: #3F51B5;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.groups:hover svg {
+    background: #5967b2;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.pages svg {
+    background: #FF9800;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.pages:hover svg {
+    background: #fdaf3d;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.blogs svg {
+    background: #2196F3;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.blogs:hover svg {
+    background: #4fabf4;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.events svg {
+    background: #E91E63;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.events:hover svg {
+    background: #db688f;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.saved svg {
+    background: #fd3a84;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.saved:hover svg {
+    background: #ff6fa6;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.albums svg {
+    background: #4CAF50;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.albums:hover svg {
+    background: #6cb26f;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.home svg {
+    background: #ff9800;
+}
+.tag_navbar_top_side .sidebar_innr > .btn.home:hover svg {
+    background: #fdaf3d;
+}
+body > div.tag_navbar_top_side > div > a:nth-child(9):hover > svg{
+    background: #4f4e4e
+}
+body > div.tag_navbar_top_side > div > a.btn.btn-mat.valign.market >svg{
+    background: #00BCD4;
+}
+body > div.tag_navbar_top_side > div > a.btn.btn-mat.valign.market:hover >svg{
+    background: #49bfce;
+}
+
+/*Other Colour Modifications*/
+#contnet > div > div:nth-child(3) > div > div.wo_market > div > svg > path:nth-child(1){
+    fill:var(--sfrpastel-red)
+}
+#contnet > div > div:nth-child(3) > div > div.wo_market > div > svg > path:nth-child(2){
+    fill:var(--sfrred2)
+}
+#contnet > div > div:nth-child(3) > div > div.wo_market > div > svg > path:nth-child(3){
+    fill:var(--sfrred2)
+}
+#contnet > div > div:nth-child(3) > div > div.wo_market > div > svg > path:nth-child(4){
+    fill:var(--sfrred)
+}
+#contnet > div.container > div > div:nth-child(2) > div > div > div > div > svg > path:nth-child(1){
+    fill:var(--sfrpastel-purple);
+}
+#contnet > div.container > div > div:nth-child(2) > div > div > div > div > svg > g > path:nth-child(1){
+    fill:var(--sfrpurple)
+}
+#contnet > div.container > div > div:nth-child(2) > div > div > div > div > svg > g > path:nth-child(2){
+    fill:var(--sfrpurple);
+}
+#contnet > div.container > div > div:nth-child(2) > div > div > div > div > svg > g > circle:nth-child(3){
+    fill:var(--sfrpurple);
+}
+#contnet > div.container > div > div:nth-child(2) > div > div > div > div > svg > g > path:nth-child(4){
+    fill:var(--sfrpurple);
+}
+#contnet > div.container > div > div:nth-child(2) > div > div > div > div > svg > g > circle:nth-child(5){
+    fill:var(--sfrpurple);
+}
+#contnet > div.container > div > div:nth-child(2) > div > div > div > div > svg > g > path:nth-child(6){
+    fill:var(--sfrpurple);
+}
+#contnet > div.container > div > div:nth-child(2) > div > div > div > div > svg > path:nth-child(3){
+    fill:var(--sfrpurple2);
+}
+#contnet > div > div > div > div.empty_state > svg > path:nth-child(1){
+    fill:var(--sfrpastel-purple)
+}
+#contnet > div > div > div > div.empty_state > svg > path:nth-child(2){
+    fill:var(--sfrpurple)
+}
+#contnet > div > div > div > div.empty_state > svg > path:nth-child(3){
+    fill:var(--sfrpurple)
+}
+#contnet > div > div > div > div.empty_state > svg > path:nth-child(4){
+    fill:var(--sfrpurple)
+}
+#contnet > div.page-margin > div > div > div.empty_state > svg > path:nth-child(5){
+    fill:var(--sfrpurple2)
+}
+#contnet > div.page-margin > div > div > div.empty_state > svg > path:nth-child(4){
+    fill:var(--sfrpurple2)
+}
+.tag_prem{
+    background: var(--main);
+}
+#contnet > div.page-margin > div > div > div.empty_state > svg > path:nth-child(3){
+    fill:var(--sfrpurple2)
+}
+#contnet > div.page-margin > div > div > div.empty_state > svg > g > path:nth-child(6){
+    fill:var(--sfrpurple);
+}
+#contnet > div.page-margin > div > div > div.empty_state > svg > g > path:nth-child(5){
+    fill:var(--sfrpurple);
+}
+#contnet > div.page-margin > div > div > div.empty_state > svg > g > path:nth-child(4){
+    fill:var(--sfrpurple)
+}
+#contnet > div.page-margin > div > div > div.empty_state > svg > g > circle:nth-child(1){
+    fill:var(--sfrpurple);
+}
+#contnet > div.page-margin > div > div > div.empty_state > svg > g > circle:nth-child(2){
+    fill:var(--sfrpurple);
+}
+#contnet > div.page-margin > div > div > div.empty_state > svg > g > circle:nth-child(3){
+    fill:var(--sfrpurple);
+}
+#contnet > div.page-margin > div > div > div.empty_state > svg > path:nth-child(1){
+    fill:var(--sfrpastel-purple);
+}
+#contnet > div.page-margin > div > div.page-margin > div > svg > path:nth-child(1){
+    fill:var(--sfrpastel)
+}
+#contnet > div.page-margin > div > div.page-margin > div > svg > path:nth-child(2){
+    fill:var(--sfrprimary)
+}
+#contnet > div.page-margin > div > div.page-margin > div > svg > path:nth-child(3){
+    fill:var(--sfrprimary)
+}
+#requests-list > div > svg > path:nth-child(3){
+ fill:var(--sfrpurple2)   
+}
+#requests-list > div > svg > g > path:nth-child(1){
+    fill:var(--sfrpurple);
+}
+#requests-list > div > svg > g > path:nth-child(2){
+    fill:var(--sfrpurple);
+}
+#requests-list > div > svg > g > path:nth-child(3){
+    fill:var(--sfrpurple);
+}
+#requests-list > div > svg > path:nth-child(1){
+    fill:var(--sfrpastel-purple);
+}
+#messages-list > div > svg > path:nth-child(3){
+    fill:var(--sfrred2);
+}
+#messages-list > div > svg > g > circle:nth-child(1){
+    fill:var(--sfrred);
+}
+#messages-list > div > svg > g > path:nth-child(4){
+    fill:var(--sfrred);
+}
+#messages-list > div > svg > g > circle:nth-child(3){
+    fill:var(--sfrred);
+}
+#messages-list > div > svg > g > path:nth-child(2){
+    fill:var(--sfrred);
+}
+#messages-list > div > svg > path:nth-child(1){
+    fill:var(--sfrpastel-red)
+}
+#load-more-posts > div > div > svg{
+    > path:nth-child(1){
+    fill: var(--main);
+    }
+    > path:nth-child(2){
+    fill: var(--main-hover)
+    }
+}
+#videos-list > div > svg > path:nth-child(1){
+    fill:var(--sfrpastel-purple);
+}
+#videos-list > div > svg > path:nth-child(2){
+    fill:var(--sfrpurple);
+}
+#likes-list > div > svg > path:nth-child(2){
+    fill: var(-sfrred);
+}
+#photos-list > div > svg > path:nth-child(1){
+ fill: var(--sfrpastel-green)
+}
+#photos-list > div > svg > path:nth-child(2){
+ fill: var(--sfrgreen)    
+}
+#photos-list > div > svg > path:nth-child(3){
+ fill: var(--sfrgreen)    
+}
+#photos-list > div > svg > path:nth-child(4){
+ fill: var(--sfrgreen)    
+}
+#likes-list > div > svg > path:nth-child(1){
+    fill: var(--sfrpastel-red);
+}
+#load-more-posts > div > div > svg > path:nth-child(2){
+    fill: var(--main)
+}
+#load-more-posts > div > div > svg > path:nth-child(1){
+    fill: var(--sfrpastel);
+}
+#contnet > div.page-margin.profile.wo_user_profile > div > div:nth-child(2) > div > div.valign.wow_user_page_btns > button:hover{
+    background: var(--sfr-hovered2);
+}
+.tag_hdr_droptoggle:hover{ 
+    background-color: var(--sfr-hovered);
+}
+.btn-main-rev, .tag_page_nav li.active a:hover, .ui-timepicker-div + .ui-datepicker-buttonpane > button:not(.ui-priority-primary){
+    color: var(--main-hover);
+}
+.tag_pub_box_bg_camlve.camera{
+    color: var(--main);
+}
+.tag_pub_box_bg_camlve.camera:hover{
+    color: var(--main-hover);
+}
+.wo_user_profile .user-bottom-nav li .menuactive {
+    color: var(--sfrprimary);
+}
+.wo_user_profile .user-bottom-nav li .menuactive:after {
+    background-color: var(--sfrprimary);
+}
+.post .post-description p a.hash, .post .post-description p+a.hash, .post .post-footer .comments-list .comment .tag_comm_body .comment-text a.hash{
+    color: var(--sfrprimary);
+}
+.event-l-info > span, .fundings_desc time{
+    color: var(--sfrprimary);
+}
+.wo_page_hdng span{
+    background: var(--sfrprimary);
+}
+.wow_blog_cats a.active{
+    background-color: var(--sfrprimary);    
+}
+div.chat-textarea.btn-group > form > div.valign.chat-btns-w{
+    .btn.btn-file.record-chat-audio.chat_optns > svg >rect{
+        opacity: 1;
+    }
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover{
+    background-color: var(--sfrprimary)
+}
+.art-video-player .art-mask .art-state svg.playback-icons {
+    color: var(--sfrprimary)!important;
+}
+
+/*Removes Box-Shadow/Back Shadow From Right-Hand Sidebar*/
+.btn-mat-raised {
+    box-shadow: none;
+}
+
+/*Changes Mix of Red and Orange to One Singular Colour*/
+.greetalert .small-texts {
+    color: var(--sfrprimary) !important;
+}
+.btn-main,
+.btn-main-rev:hover,
+.ui-timepicker-div + .ui-datepicker-buttonpane > button:hover,
+.ui-timepicker-div + .ui-datepicker-buttonpane > button.ui-priority-primary {
+    background-color: var(--sfrprimary);
+}
+.btn-main:hover,
+.btn-main:focus,
+.btn-main-rev:focus {
+    background-color: var(--sfrprimary-hovered);
+}
+.wow_htag a {
+    color: var(--sfrprimary);
+}
+.btn-main-rev,
+.tag_page_nav li.active a,
+.ui-timepicker-div + .ui-datepicker-buttonpane > button:not(.ui-priority-primary) {
+    color: var(--sfrprimary);
+}
+.refresh {
+    color: var(--sfrprimary);
+}
+.tag_sidebar_users .btn {
+    background-color: var(--sfrprimary);
+}
+.tag_sidebar_users:hover .btn:hover {
+    background-color: var(--sfrprimary-hovered);
+}
+.tag_chat_side_btn:hover,
+.tag_stories_on_home .view-more-stories {
+    background: var(--sfr-hovered);
+}
+.chat-gif-toggle > svg > path {
+    fill: var(--sfrprimary);
+}
+.dropup > div > svg {
+    > rect {
+        fill-opacity: 0
+    }
+    > path {
+        fill: var(--sfrprimary);
+    }
+}
+.comment_combo_footer.valign > svg.btn:nth-of-type(1) {
+    > path {
+        d: path("M 12 3.75 C 7.44365 3.75 3.75 7.44365 3.75 12 C 3.75 13.2278 4.01821 14.393 4.49925 15.4401 L 6.14124 13.7981 L 6.17801 13.7613 C 6.81331 13.126 7.34307 12.5962 7.82019 12.2322 C 8.32379 11.8479 8.85587 11.5784 9.5 11.5784 C 10.1441 11.5784 10.6762 11.8479 11.1798 12.2322 C 11.6569 12.5962 12.1867 13.126 12.822 13.7613 L 12.822 13.7613 L 12.8588 13.7981 L 14.0003 14.9396 C 14.496 14.4467 14.9261 14.0329 15.3202 13.7322 C 15.8238 13.3479 16.3559 13.0784 17 13.0784 C 17.6441 13.0784 18.1762 13.3479 18.6798 13.7322 C 19.0166 13.9892 19.3797 14.3288 19.7877 14.7298 C 20.0872 13.8754 20.25 12.9567 20.25 12 C 20.25 7.44365 16.5563 3.75 12 3.75 Z M 12 20.25 C 9.22676 20.25 6.77311 18.8816 5.27739 16.7833 L 5.53033 16.5303 L 7.2019 14.8588 C 7.88356 14.1771 8.34258 13.7203 8.73006 13.4247 C 9.10023 13.1423 9.3157 13.0784 9.5 13.0784 C 9.6843 13.0784 9.89977 13.1423 10.2699 13.4247 C 10.6574 13.7203 11.1164 14.1771 11.7981 14.8588 L 13.4697 16.5303 L 16.1 19.1607 C 14.8922 19.8537 13.4924 20.25 12 20.25 Z M 19.1161 16.1768 C 18.6465 16.9751 18.0464 17.6875 17.3451 18.2845 L 15.0611 16.0004 C 15.5523 15.5123 15.9149 15.1652 16.2301 14.9247 C 16.6002 14.6423 16.8157 14.5784 17 14.5784 C 17.1843 14.5784 17.3998 14.6423 17.7699 14.9247 C 18.1219 15.1932 18.5329 15.5947 19.1161 16.1768 Z M 2.25 12 C 2.25 6.61522 6.61522 2.25 12 2.25 C 17.3848 2.25 21.75 6.61522 21.75 12 C 21.75 17.3848 17.3848 21.75 12 21.75 C 6.61522 21.75 2.25 17.3848 2.25 12 Z M 12.75 9 C 12.75 8.30964 13.3096 7.75 14 7.75 C 14.6904 7.75 15.25 8.30964 15.25 9 C 15.25 9.69036 14.6904 10.25 14 10.25 C 13.3096 10.25 12.75 9.69036 12.75 9 Z M 14 6.25 C 12.4812 6.25 11.25 7.48122 11.25 9 C 11.25 10.5188 12.4812 11.75 14 11.75 C 15.5188 11.75 16.75 10.5188 16.75 9 C 16.75 7.48122 15.5188 6.25 14 6.25 Z");
+        fill: var(--sfrprimary)
+    }
+}
+.d-block.btn-reg-comm-mobi.btn {
+    > path {
+        d: path:nth-child(1)("M 20.34 9.32007 l -13.99 -7 A 3.00087 3.00087 0 0 0 2.27 6.22 L 4.41 11 l 0.26 0.59 a 1.05944 1.05944 0 0 1 0 0.81994 L 4.41 13 L 2.27 17.78 a 2.95353 2.95353 0 0 0 0.67 3.37988 A 2.96553 2.96553 0 0 0 5 22 a 3.14129 3.14129 0 0 0 1.35 -0.32007 l 13.99 -7 a 2.99328 2.99328 0 0 0 0 -5.35986 Z");
+        fill: var(--sfrprimary);
+    }
+    > path:nth-child(2) {
+        fill: #323232;    
+    }
+}
+/*Moves filters header up slightly*/
+body.tag_header_top_p .tag_home_filters.home{
+    top: 55px;
+}
+.tag_randm_plist .product_info h2{
+    font-size: 46px;
+}
+.tag_randm_plist{
+    padding: 0 2px;
+}
+.tag_randm_plist .product_info h2{
+    max-height:120px;
+}
+.tag_prods_slidr .slick-next{
+    right: calc((-1 * (103vw - 1408.45px))/2 + 10px);
+    width: calc((103vw - 1375.45px - 30px)/2);
+}
+.tag_prods_slidr .slick-prev{
+    left: calc((-1 * (100vw - 1357.45px))/2 + 10px);
+}
+}
