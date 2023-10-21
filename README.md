@@ -5,7 +5,7 @@
 <b><p align="center">An new and improved interface for the SocialFurr Social Media Platform</p></b>
 
 # About
-SocialFurr Refreshed is a User Style/Theme that modifies and removes certain aspects of the SocialFurr website with the intention of providing an overal better exerpeience for the user.
+SocialFurr Refreshed is a User Style/Theme that modifies and removes certain aspects of the SocialFurr website with the intention of providing an overal better exerpeience for the user. The theme is designed for dark mode exclusively as some of the colour modifications don't translate well to a light theme environment (like the hover animations.)
 
 # Known Issues
 * Emoji and Media Icon on "Reply to Comment" Display as Default Red
