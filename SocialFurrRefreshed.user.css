@@ -1,10 +1,10 @@
 /* ==UserStyle==
-@name         Test SocialFurr
-@version      20231021.00.28
+@name         SocialFurr Refreshed
+@version      20231022.20.52
 @namespace    userstyles.world/user/ThatOneUnoriginal
-@description  Testing a creation of a theme for socialfurr
+@description  Removes multiple elements of the website including premium upselling, marketplace + products feature, and other annoying bits and pieces from the website.
 @author       ThatOneUnoriginal
-@license      MIT
+@license      No License
 ==/UserStyle== */
 
 @-moz-document domain("socialfurr.com") {
